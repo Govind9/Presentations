@@ -1,0 +1,8 @@
+{
+"controls": "true",
+"progress": "true",
+"transition": "zoom",
+"parallaxBackgrondImage": "pt.jpg",
+"parallaxBackgroundSize": "2100px 900px",
+"viewDistance": "3"
+}
