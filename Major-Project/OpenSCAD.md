@@ -80,6 +80,22 @@ OpenSCAD community was the perfect match for finding a project matching our expe
 * Multiple nodes can be marked as root nodes for partial evaluation.
 * Warning mechanism needed to notify the user of multiple root tagged nodes in the tree.
 
+----
+
+#### Grammer issues for incomplete syntax
+
+There were some issue with the grammer. The following incomplete syntax were passing undetected:
+* The use tag: use <
+* The include tag: include <
+* The string quote: "
+* The multiline comments: /*
+
+----
+
+#### Customiser present name with a dot
+
+There was issue with the customiser present name containing a dot. Basically the dot is being treated as a membership operator that fools the boost library into considering the portion of the name after the dot as a child of the portion of the name before the the dot. This misconception is kept and the JSON object tree is created accordingly.
+
 ---
 
 #### Solution Strategies
